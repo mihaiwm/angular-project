@@ -8,9 +8,4 @@ import { Router } from '@angular/router';
 })
 export class NavigationComponent {
   constructor(private router: Router) {}
-  onLoginClick() {
-    console.log('Login button clicked!');
-
-    this.router.navigate(['/login']);
-  }
 }

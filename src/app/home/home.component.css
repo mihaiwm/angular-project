@@ -1,0 +1,26 @@
+.chat-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  height: 70vh;
+  overflow-y: auto;
+}
+
+.question {
+  background: #3331314d;
+  padding: 10px 20px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 12px 1px #857f7f4f;
+  max-width: 70%;
+  margin-top: 20px;
+}
+
+.answer {
+  background: #9387874d;
+  padding: 10px 20px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 12px 1px #857f7f4f;
+  max-width: 70%;
+  margin-top: 20px;
+  margin-left: auto;
+}

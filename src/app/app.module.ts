@@ -1,25 +1,29 @@
+import { MatButtonModule } from '@angular/material/button';
+// app.module.ts
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms'; // <-- Import FormsModule
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component'; // <-- Import HomeComponent
 import { NavigationComponent } from './navigation/navigation.component';
-import {MatButtonModule} from '@angular/material/button'; 
-import {MatIconModule} from '@angular/material/icon'; 
-
+import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationComponent
+    NavigationComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatButtonModule,
-    MatIconModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

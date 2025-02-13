@@ -1,1 +1,19 @@
-<p>home works!</p>
+<!-- home.component.html -->
+<div class="chat-container">
+  <input type="text" [value]="inputValue()" (change)="handleChange($event)" />
+
+  <button (click)="submitQuestion()">Submit</button>
+
+  <h2>Questions & Answers</h2>
+  <div *ngFor="let question of questions(); let i = index">
+    <div class="question">
+      {{ question }}
+    </div>
+    <div>
+      <div class="answer" *ngIf="loading() === 'loading' && i === answers().length">
+        Thinking...</div
+      >
+      <div class="answer" *ngIf="answers()[i]" [innerHTML]="answers()[i]"></div>
+    </div>
+  </div>
+</div>
