@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from 'environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ChatService {
-  private apiUrl = 'https://openrouter.ai/api/v1/chat/completions';
-  private apiKey = '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';
+  private apiUrl = environment.apiUrl
+  private apiKey = environment.apiKey
 
   constructor(private http: HttpClient) {}
 
